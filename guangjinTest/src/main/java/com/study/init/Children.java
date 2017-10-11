@@ -20,6 +20,7 @@ public class Children extends Father{
 	public static void staticMethod(){
 		System.out.println("静态方法 children");
 	}
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Father f = new Children("asd");
 		System.out.println("-------------------");
@@ -27,7 +28,10 @@ public class Children extends Father{
 		f.method();
 		f.staticMethod();//子类可以调用父类的静态方法，但是不能被重写，出现同名方法，父类方法隐藏
 		System.out.println("-------------------");
-		
+		System.out.println("f.getClass() == Father.class " + (f.getClass() == Father.class));
+		System.out.println("f.getClass() == Children.class " + (f.getClass() == Children.class));
+		System.out.println("f instanceof Father " + (f instanceof Father));
+		System.out.println("f instanceof Children " + (f instanceof Children));
 	}
 	
 }
