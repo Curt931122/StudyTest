@@ -1,5 +1,6 @@
 package com.study.sorting;
 
+import java.util.Arrays;
 
 public class MyMergeSort {
     static int number=0;
@@ -10,17 +11,13 @@ public class MyMergeSort {
         printArray("排序后：",a);
     }
 
-    private static void printArray(String pre,int[] a) {
-        System.out.print(pre+"\n");
-        for(int i=0;i<a.length;i++)
-            System.out.print(a[i]+"\t");    
-        System.out.println();
-    }
-
-    private static void MergeSort(int[] a) {
+    public static void MergeSort(int[] a) {
         // TODO Auto-generated method stub
         System.out.println("开始排序");
         Sort(a, 0, a.length - 1);
+    }
+    private static void printArray(String pre,int[] a) {
+        System.out.print(pre+"\n"+Arrays.toString(a));
     }
 
     private static void Sort(int[] a, int left, int right) {
