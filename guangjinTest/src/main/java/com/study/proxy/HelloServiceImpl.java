@@ -5,4 +5,9 @@ public class HelloServiceImpl implements HelloService{
     public void sayHelloWorld() {
         System.out.println("hello world!");
     }
+
+	@Override
+	public void sayGoodbye() {
+		System.out.println("Goodbye!");
+	}
 }
