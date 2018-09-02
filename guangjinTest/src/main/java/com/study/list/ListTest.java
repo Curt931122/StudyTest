@@ -9,7 +9,7 @@ import java.util.Set;
 public class ListTest {
 	static final int MAXIMUM_CAPACITY = 1 << 30;
 	public static void main(String[] args) {
-		List<String> list = new ArrayList<String>();
+		List<String> list = new ArrayList<String>(); 
 		List<String> list1 = new LinkedList<String>();
 		Set<String> set = new HashSet<String>(16);
 		System.out.println(ListTest.tableSizeFor(5));
